@@ -17,6 +17,15 @@ public class Switcher {
 		this.listofcommands.add(command);
 	}
 	
+	public void giveCommand(Command command){
+		for(Command x : this.listofcommands){
+			if(x.equals(command)){
+				command.execute();
+				System.out.println("This is:"+command.getClass());
+			}
+		}
+		
+	}
 	public void executeCommand(){
 		
 		for(Command c : this.listofcommands){
