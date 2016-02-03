@@ -1,5 +1,13 @@
 package org.sandeep.command;
 
+/* Implement any functionality you want and its respective 
+ * Dependency Injection class. E.g Light implements on and off methods
+ * Turnoncommand will implement command interface and using 
+ * DI it will execute on method in LIGHT class.
+ * 
+ * 
+ * 
+ */
 public class app {
 	
 	public static void main(String args[]){

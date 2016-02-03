@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //invoker: everything happens from this switcher. 
+//Add all the 
 public class Switcher {
 
 	public List<Command> listofcommands;
