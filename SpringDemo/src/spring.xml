@@ -2,7 +2,23 @@
 	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 	<bean id="Triangle" class="org.sandeep.SpringDemo.Triangle">
-		<property name="Type" value="Equilateral">
-		</property>
+		<property name="PointA" ref="ZeroPoint"></property>
+		<property name="PointB" ref="Point2"></property>
+		<property name="PointC" ref="Point3"></property>
+	</bean>
+	
+	<bean id="ZeroPoint" class="org.sandeep.SpringDemo.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="Point2" class="org.sandeep.SpringDemo.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="Point3" class="org.sandeep.SpringDemo.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
 	</bean>
 </beans>
