@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="id1" class="me.SpringTravel.src.Bus">
+		<property name="fuel" value="petrol">
+			
+		</property>
+		<property name="speed" value="200">
+			</property>
+	</bean>
+	<bean id="id2" class="me.SpringTravel.src.Car">
+		<property name="carType" value="Tesla"></property>
+		<property name="mileage" value="150"></property>		
+	</bean>
+</beans>
