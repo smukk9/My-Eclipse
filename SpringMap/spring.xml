@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="id1" class="me.SpringMap.src.welomeBean">
+	<property name="data">
+	<map>
+	<entry key="K1">
+	<value>10</value>
+	</entry>
+	<entry key="K2">
+	<value>20</value>
+	</entry>
+	<entry key="K3">
+	<value></value>
+	</entry>
+	<entry key="K1">
+	<value>30</value>
+	</entry>
+	</map>
+	</property>
+		 	
+	</bean>
+</beans>
