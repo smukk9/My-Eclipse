@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="id1" class="me.Sandeep.sping.Catagories" autowire="byType">
+		<property name="cat_name" value="General_books"></property>
+	</bean>
+	<bean id="id2" class="me.Sandeep.sping.Book">
+		<property name="Bookname" value="Harry potter and Deathly Hollows"></property>
+		<property name="price" value="$35"></property>
+		
+		
+	</bean>
+</beans>
