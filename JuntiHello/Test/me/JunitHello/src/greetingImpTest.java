@@ -28,7 +28,7 @@ public class greetingImpTest {
 	}
 	@Test(expected = IllegalArgumentException.class)
 	public void ShouldReturn_ExceptionforTest(){
-		System.out.println("ShouldReturn_ExceptionforTes()t");
+		System.out.println("ShouldReturn_ExceptionforTes()");
 		//Greetings grt = new greetingImp();
 		grt.greet(null);
 	}
