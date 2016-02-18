@@ -1,6 +1,6 @@
 package me.collectionHibernate.src;
 
-import java.util.HashSet;S
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.ElementCollection;
