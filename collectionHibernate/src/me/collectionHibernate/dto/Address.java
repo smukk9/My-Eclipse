@@ -1,4 +1,4 @@
-package me.collectionHibernate.src;
+package me.collectionHibernate.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

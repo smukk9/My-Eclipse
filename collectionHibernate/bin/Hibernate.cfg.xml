@@ -29,7 +29,9 @@
         <property name="hbm2ddl.auto">create</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="me.collectionHibernate.src.userDetails"/>
+        <mapping class="me.collectionHibernate.dto.userDetails"/>
+        <mapping class="me.collectionHibernate.dto.vehicle"/>
+        
 
     </session-factory>
 
