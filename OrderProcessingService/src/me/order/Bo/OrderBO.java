@@ -7,5 +7,5 @@ public interface OrderBO {
 
 	public boolean pacleOrder(Order order)throws BOException;
 	public boolean cancelOrder(int id)throws BOException;
-	public boolean delteOrder(int id) throws BOException;
+	public boolean deleteOrder(int id) throws BOException;
 }

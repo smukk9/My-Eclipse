@@ -1,4 +1,4 @@
-package me.order.Bo;
+	package me.order.Bo;
 
 import java.sql.SQLException;
 
@@ -45,13 +45,14 @@ public class orderBoImpl implements OrderBO {
 			}
 		} catch (SQLException e) {
 			throw new BOException(e);
+			
 		}
 		
 		return true;
 	}
 
 	@Override
-	public boolean delteOrder(int id) throws BOException {
+	public boolean deleteOrder(int id) throws BOException {
 		try {
 			int result = dao.delete(id);
 			if(result==0){
@@ -61,5 +62,7 @@ public class orderBoImpl implements OrderBO {
 			throw new BOException(e);		}
 		return true;
 	}
+	
+	
 
 }
