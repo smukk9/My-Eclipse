@@ -1,0 +1,28 @@
+There are only two certainties in big data today: It won't look like yesterday's data infrastructure, and it'll be very, very fast.
+
+This latter trend is evident in the rise of Apache Spark and real-time analytics engines, but it's also clear from the parallel rise of real-time transactional databases (NoSQL). The former is all about lightning-fast data processing, while the latter takes care of equally fast data storage and updates.
+
+[ Learn how to unlock the power of the Internet of things analytics with big data tools in InfoWorld's downloadable Deep Dive. | Explore the current trends and solutions in BI with InfoWorld's Extreme Analytics blog. ]
+The two together combine to "tackle workloads hitherto impossible," as Aerospike vice president Peter Goldmacher told me in an interview.
+
+The machines take over BI
+
+This need for speed is increasingly evident in a new breed of BI. While we normally think of BI as analysis of data by data analysts, DataStax CEO Billy Bosworth said in an interview that, increasingly, machines will take over data analytics.
+
+"'Machine BI'," he says, "is intelligence that has to take place at the processing speed of a machine in order to make a transactional app smarter from transaction to transaction. Human intervention is not possible in this model, and therefore, not a design objective."
+
+In such a world -- say, an online travel application -- the machine must take clickstream data in real time and translate it into relevant offers, layout, and more. There's simply no time for a human to probe the mysteries of user behavior.
+
+As Goldmacher spins it, "IT must capture enormous data sets in order to populate Hadoop and Spark, and the capture mechanism is almost always some sort of low-cost NoSQL environment."
+
+Hence, a real-time NoSQL database like Cassandra, MongoDB, or Aerospike responds to clicks immediately, then pushes that clickstream data into a tool like Hadoop to perform deeper analysis, which then pushes that understanding back to the NoSQL database to be acted upon.
+
+This model keeps getting faster now that companies are swapping out Hadoop's venerable (and batch-oriented) MapReduce for real-time Spark. Indeed, the connection between a real-time analytics system and a real-time transactional system keeps getting tighter.
+
+In this way, Bosworth suggests, "The 'learning' that occurs is put into a fast feedback loop at machine speeds to make each transaction more informed or contextual when appropriate."
+
+How fast is fast? Speaking of increasingly sophisticated graph databases like Neo4j, Neo Technology Founder and CEO Emil Eifrem suggested to me, "When you have a highly connected data set -- for example in a fraud detection system or a recommendation engine or an identity management application -- then a graph database can easily be a million times faster than a relational database."
+
+When I pushed back on his "million times faster" claim, Eifrem responded, "It's basically 1,000X performance improvements despite a 1,000X increase in data size. A graph structure not only speeds up traversals, but also ensures constant performance regardless of the database size."
+
+This isn't about a better mousetrap, in other words. It's about creating a completely new type of application.
