@@ -13,6 +13,7 @@
 	Phone Number: <input name="p_number" type="text"></input><br/>
 	E-Mail Id: <input name="e_mail" type="text"></input><br/>
 	Country: <input name="country_name" type="text"></input><br/>
+	Password:<input name="pwd" type="password"></input><br/>
 	<input type="submit" value="Register"></input>
 </form>
 

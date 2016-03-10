@@ -3,13 +3,16 @@ package org.services.pck;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import org.services.Auth.Authservices;
+import org.services.dao.UserDao;
+import org.services.dto.User;
 
 /**
  * Servlet implementation class loginservice
@@ -32,18 +35,28 @@ public class loginservice extends HttpServlet {
 		String u_name= (String)request.getParameter("user");
 		String pwd = (String) request.getParameter("pwd");
 		
-		Authservices Auth = new Authservices();
-		boolean result = Auth.Authenticate(u_name, pwd);
-		if(result){
+		UserDao userdao = new UserDao();
+		
+		User result = userdao.userExists(u_name);
+		if(result!=null){
 			
-			pw.write("you are logged in success full");
+		if(pwd.equals(result.getPassword())){
+			System.out.println("--------------------");
+			System.out.println(result.getUser_Name());
+			HttpSession session = request.getSession();
+			session.setAttribute("saveduser", result);
+			RequestDispatcher reqds = request.getRequestDispatcher("Loginsucess.jsp");
+			reqds.forward(request, response);
+		}
 			
 		}else
 		{
-			pw.write("wrong");
+			pw.write("No user exists with that name \n please enter username agin");
 		}
 		
 		
 	}
+	
+	
 
 }

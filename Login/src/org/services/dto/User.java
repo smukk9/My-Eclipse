@@ -1,12 +1,44 @@
 package org.services.dto;
 
-public class User {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+//User class has all the details of the user this whole details will be used to save .
+@Entity
+@Table(name="userData")
+public class User {
+	
+	public User(){
+		//No-arg constructor
+	}
+	@Id
+	@GeneratedValue( strategy = GenerationType.IDENTITY )
+	private int user_Id;
+	@Column
 	private String user_Name;
-	private int phone_Number;
+	
+	@Column
+	private Long phone_Number;
+	
+	@Column
 	private String E_mail;
+	
+	@Column
 	private String country;
+	
+	@Column
 	private String password;
+	
+	public int getUser_Id() {
+		return user_Id;
+	}
+	public void setUser_Id(int user_Id) {
+		this.user_Id = user_Id;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -19,10 +51,10 @@ public class User {
 	public void setUser_Name(String user_Name) {
 		this.user_Name = user_Name;
 	}
-	public int getPhone_Number() {
+	public Long getPhone_Number() {
 		return phone_Number;
 	}
-	public void setPhone_Number(int phone_Number) {
+	public void setPhone_Number(Long phone_Number) {
 		this.phone_Number = phone_Number;
 	}
 	public String getE_mail() {
