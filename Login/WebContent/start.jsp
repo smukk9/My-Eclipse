@@ -9,10 +9,11 @@
 </head>
 <body class="news">
 	
+	
 		<div class="nav">
 		<ul>
-			<li class="Login"><a href="Login.jsp">Login</a></li>
-			<li class="Registration"><a  href="Registration.jsp">Registration</a></li>
+			<li class="Login"><a href="Login.jsp" target="frame1">Login</a></li>
+			<li class="Registration"><a  href="Registration.jsp" target="frame1">Registration</a></li>
 			<li class="Peek"><a href="#">Peek</a></li>
 		</ul>
 		</div>

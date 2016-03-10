@@ -3,9 +3,9 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	<display-name>Login</display-name>
+	<display-name>Welcome</display-name>
 	<welcome-file-list>
-		<welcome-file>start.jsp</welcome-file>
+		<welcome-file>master.jsp</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -16,9 +16,4 @@
 		<servlet-name>Registration</servlet-name>
 		<servlet-class>org.services.pck.Registration</servlet-class>
 	</servlet>
-	
-	
-
-
-
 </web-app>

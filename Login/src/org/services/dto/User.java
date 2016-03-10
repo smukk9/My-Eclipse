@@ -5,19 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 //User class has all the details of the user this whole details will be used to save .
 @Entity
+@NamedQuery(name="userByIdPwd", query="from User where user_Name=?")
 @Table(name="userData")
 public class User {
 	
 	public User(){
 		//No-arg constructor
 	}
-	@Id
-	@GeneratedValue( strategy = GenerationType.IDENTITY )
+	
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int user_Id;
+	
+	@Id	
 	@Column
 	private String user_Name;
 	

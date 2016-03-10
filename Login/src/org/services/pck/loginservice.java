@@ -37,21 +37,20 @@ public class loginservice extends HttpServlet {
 		
 		UserDao userdao = new UserDao();
 		
-		User result = userdao.userExists(u_name);
+		User result = userdao.userExists(u_name, pwd);
 		if(result!=null){
-			
-		if(pwd.equals(result.getPassword())){
 			System.out.println("--------------------");
 			System.out.println(result.getUser_Name());
 			HttpSession session = request.getSession();
 			session.setAttribute("saveduser", result);
 			RequestDispatcher reqds = request.getRequestDispatcher("Loginsucess.jsp");
 			reqds.forward(request, response);
-		}
+		
 			
 		}else
 		{
 			pw.write("No user exists with that name \n please enter username agin");
+			throw new RuntimeException("Unable to find Account for account number :" );
 		}
 		
 		

@@ -1,7 +1,6 @@
 package org.services.dao;
 
 
-import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -36,44 +35,31 @@ public class UserDao {
 			e.printStackTrace();
 			return false;
 		}
-		
+
 
 	}
 
-	public User userExists(String u_name){
+	public User userExists(String u_name,String pwd){
 
 		Session session = HibernateUtil.getSessionfactory().openSession();
-	//	Transaction trans = session.beginTransaction();
-		Query querry = session.createQuery("from User where user_Name = :username");
-		
-		querry.setString("username", u_name);
-		
-		@SuppressWarnings("unchecked")
-		List<User> r =(List<User>)querry.list();
-		
-		
-		if(r!=null){
-			
-			return r.get(0);
-		}else{
-			return null;
+		Transaction trans = session.beginTransaction();
+		Query querry = session.getNamedQuery("userByIdPwd");
+		querry.setString(0, u_name);
+
+		User values = (User)querry.uniqueResult();
+		trans.commit();
+		session.close();
+		if(values!=null){
+
+			if(pwd.equals(values.getPassword())){
+System.out.println(values.getUser_Name());
+				return values;
+			}else{
+				
+				throw new RuntimeException("Password is worng :" );
+			}
 		}
-		
-		
+
+		return null;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
