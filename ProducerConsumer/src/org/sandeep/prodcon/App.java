@@ -1,9 +1,19 @@
 package org.sandeep.prodcon;
 
-public class App {
-	int Size =10;
-	int buffer[];
+import java.io.Serializable;
+
+public class App implements Serializable  {
 	
-	Thread produce = new Thread(new Producer(buffer[], Size),"Producer");
+	public static void main(String arg[]) {
+		
+	
+	
+	Producer prod = new Producer();
+	new Thread(prod).start();
+	
+	Consumer com = new Consumer();
+	new Thread(com).start();
+	
+	}
 
 }
