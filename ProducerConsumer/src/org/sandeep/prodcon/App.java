@@ -1,19 +1,23 @@
 package org.sandeep.prodcon;
 
-import java.io.Serializable;
+import java.io.IOException;
 
-public class App implements Serializable  {
+public class App   {
 	
-	public static void main(String arg[]) {
+	public static void main(String arg[])throws IOException, InterruptedException {
+
+	
 		
-	
-	
-	Producer prod = new Producer();
-	new Thread(prod).start();
-	
-	Consumer com = new Consumer();
-	new Thread(com).start();
-	
+		System.out.println("**** Thread Starts ****\n");
+		
+		Thread t1 = new Thread(new Consumer("one"));
+		t1.start();
+		
+		Thread t2 = new Thread(new Consumer("two"));
+		t2.start();
+		t1.join();
+		t2.join();
+		System.out.println("\n**** Thread completed ****");
 	}
 
 }
