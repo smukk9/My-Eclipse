@@ -1,5 +1,6 @@
 package org.Ds.observer;
 
+@SuppressWarnings("unused")
 public class weatherObserver1 implements Observer {
 
 	private int temp;

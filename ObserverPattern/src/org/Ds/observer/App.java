@@ -3,6 +3,7 @@ package org.Ds.observer;
 public class App {
 
 	
+	@SuppressWarnings("unused")
 	public static void main(String arg[]) {
 		
 		weatherStation station = new  weatherStation();
