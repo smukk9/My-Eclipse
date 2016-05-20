@@ -9,7 +9,7 @@ public class javalocks {
 	
 	/*
 	 * A reentrant lock will make sure there is no starving when many threads are wait
-	 * for thw locks. it garuntee that.
+	 * for thw locks. it garuntee that. this happens only if the fairness parameter is set to true. 
 	 */
 	private Lock lock = new ReentrantLock();
 	
