@@ -34,7 +34,7 @@ public class caltest implements Callable<String> {
 		for(int i=0; i <5 ;i++)
 		{
 			Future<String> ftr =exe.submit(new caltest(i+1));
-			list.add(ftr);
+			list.add(ftr); 
 			
 		}
 		
